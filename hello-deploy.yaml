@@ -9,7 +9,7 @@ metadata:
   name: hello-service
   namespace: hello-namespace
 spec:
-  type: NodePort
+  # type: NodePort
   selector: 
     app: hello-app
   ports:
@@ -38,3 +38,22 @@ spec:
           image: arthuracrs/hello:latest
           ports:
             - containerPort: 8080
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-ingress
+  namespace: hello-namespace
+spec:
+  rules:
+    # - host: hello.com
+    - http:
+        paths:
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-service
+                port:
+                  name: http

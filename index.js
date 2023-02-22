@@ -31,7 +31,7 @@ function combineFiles(filePaths, outputFile) {
     });
   }
 
-const order = ["namespace", "hello-service", "hello-deployment"]
+const order = ["namespace", "hello-service", "hello-deployment", "hello-ingress"]
 const output = "hello-deploy.yaml"
 
 combineFiles(order, output)
