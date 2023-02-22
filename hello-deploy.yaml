@@ -54,4 +54,4 @@ spec:
           service:
             name: hello-service
             port:
-              name: http
+              number: 80
