@@ -13,8 +13,7 @@ spec:
   selector: 
     app: hello-app
   ports:
-    - name: http
-      port: 80
+    - port: 80
       targetPort: 8080
       # nodePort: 30000
 ---
@@ -56,4 +55,4 @@ spec:
               service:
                 name: hello-service
                 port:
-                  name: http
+                  number: 80
