@@ -5,8 +5,7 @@ metadata:
   namespace: hello-namespace
 spec:
   rules:
-  - host: hello.com
-    http:
+  - http:
       paths:
         - path: /
           pathType: Prefix
