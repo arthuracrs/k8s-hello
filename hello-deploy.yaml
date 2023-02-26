@@ -33,7 +33,7 @@ spec:
       containers:
         - name: hello-container
           image: arthuracrs/hello:latest
-          imagePullPolicy: OnChanged
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
 
